@@ -24,18 +24,18 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % "2.2.5",
   compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full),
-  "com.typesafe" % "config" % "1.3.0",
+  "com.typesafe" % "config" % "1.2.1",
 
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
   "joda-time" % "joda-time" % "2.8.2" % "test",
   "org.joda" % "joda-convert" % "1.7" % "test"
   )
 
-initialize := {
-  val required = "1.8"
-  val current  = sys.props("java.specification.version")
-  assert(current == required, s"Unsupported JDK: java.specification.version $current != $required")
-}
+//initialize := {
+//  val required = "1.8"
+//  val current  = sys.props("java.specification.version")
+//  assert(current == required, s"Unsupported JDK: java.specification.version $current != $required")
+//}
 
 publishMavenStyle := true
 
